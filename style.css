@@ -9,6 +9,8 @@ nav{
     justify-content: space-around;
     background: #ddd;
     min-height: 8vh;
+      position: fixed;
+    width: 100%;
 }
 .icon a img{
     width: 30px;
