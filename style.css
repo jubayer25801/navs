@@ -35,13 +35,22 @@ nav{
     background: #000;
     margin: 4px;
    display: none;
+   transition: all .3s ease;
     
 }
 .burger{
     cursor: pointer;
   
 }
+.d-1{
+    background-image: url(./HD-wallpaper-la-casa-de-papel-netflix-series-berlin-money-heist-artwork-movies.jpg);
+background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
 
+}
 
     @media screen and (max-width:768px) {
         body{
@@ -66,6 +75,17 @@ nav{
                 background-size: cover;
                 border-radius: 50%;
             }
+            .d-1{
+                display: none;
+            }.d-2{
+                background-image: url(./soumik-choudhury-berlin.jpg);
+                background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    width: 100vw;
+                    height: 100vh;
+               
+            }
             /* nav start*/
        
            
@@ -76,7 +96,7 @@ nav{
                 top: 8vh;
                 width: 70%;
                 border: none;
-                background: rgba(0, 0, 0, 0.781);
+                background: rgba(196, 195, 195, 0.87);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -94,6 +114,15 @@ nav{
                 opacity: 1;
                 visibility: visible;
             }
+            .toggle .line1{
+                transform: rotate(-45deg)  translate(-3px , 6px);
+            }
+            .toggle .line2{
+                opacity: 0;
+            }
+            .toggle .line3{
+                transform: rotate(45deg)  translate(-3px , -6px);
+            }
           
     }
     @keyframes navLinkFade{
@@ -107,5 +136,6 @@ nav{
            
         }
     }
+
 
 
