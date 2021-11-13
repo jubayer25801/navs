@@ -6,19 +6,20 @@
 nav{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+ justify-content: space-around;
     background: #ddd;
     min-height: 8vh;
-      position: fixed;
+    position: fixed;
     width: 100%;
+ 
 }
 .icon a img{
     width: 30px;
 }
 .nav-link{
    display: flex;
-   justify-content: space-around;
     margin-bottom: 0;
+   
     
 }
 .nav-link li{
@@ -28,17 +29,17 @@ nav{
 .nav-link li a{
     text-decoration: none;
 }
-.burger div{
+ .burger div{
     width: 20px;
     height: 2px;
     background: #000;
     margin: 4px;
-    display: none;
-
+   display: none;
     
 }
 .burger{
     cursor: pointer;
+  
 }
 
 
@@ -52,11 +53,19 @@ nav{
             width: 100%;
         }
         .nav-link li{
-         margin: 40px 0;
-         opacity: 0;
+         margin: 20px 0 !important;
+         transition: .5s;
+         animation: navLinkFade ;
           
             } 
-            
+            .nav-link div{
+                background-image: url(./soumik-choudhury-berlin.jpg);
+                width: 100px;
+                height: 100px;
+                background-position: center;
+                background-size: cover;
+                border-radius: 50%;
+            }
             /* nav start*/
        
            
@@ -65,25 +74,38 @@ nav{
                 right: 0;
                 height:92vh ;
                 top: 8vh;
-                width: 50%;
-                background: #ddd;
+                width: 70%;
+                border: none;
+                background: rgba(0, 0, 0, 0.781);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 transform: translateX(100%);
                 transition: transform .5s ease-in;
-                 opacity: 0;
+               opacity: 0;
                visibility: hidden;
                 
             }
-            .burger div{
-                display: block;
+         .burger div{
+             display: block;
             }
             .nav-active{
-                transform: translateX(0%);
-                  opacity: 1;
-               visibility: visible;
+                transform: translateX(0);
+                opacity: 1;
+                visibility: visible;
             }
           
     }
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+           
+        }
+    }
+
 
